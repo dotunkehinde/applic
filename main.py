@@ -9,8 +9,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 # Correct data types
-PHONE = "+14375595074"
-LOCATION = "Ajax, Ontario, Canada"
+PHONE = ["ENV_PHONE_NUMBER"]
+LOCATION = ["ENV_LOCATION"]
 
 # Setup Chrome options
 chrome_options = webdriver.ChromeOptions()
@@ -35,8 +35,8 @@ def abort_application():
         print(f"Error while aborting application: {e}")
 
 # LinkedIn credentials
-linkedin_email = "aimykehinde@gmail.com"
-linkedin_password = "1@!myK@y2"
+linkedin_email = ["ENV_EMAIL"]
+linkedin_password = ["ENV_PASSWORD"]
 
 # Step 1: Log in to LinkedIn
 driver.get("https://www.linkedin.com/login")
